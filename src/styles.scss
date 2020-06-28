@@ -1,1 +1,29 @@
 /* You can add global styles to this file, and also import other style files */
+
+/* Importing Bootstrap SCSS file. */
+@import '~bootstrap/scss/bootstrap';
+
+body {
+  background-image: url("src/assets/crowd2.png");
+  background-size: cover;
+}
+
+html body app-root div.container nav.navbar.navbar-light.nav-tabs a.button {
+  background-color: white;
+  color: red;
+  font-size: large;
+  font-family: festival;
+  cursor: pointer;
+  transition: all .1s ease-in-out;
+
+
+}
+
+html body app-root div.container nav.navbar.navbar-light.nav-tabs a.button:hover {
+  background-color: white;
+  color: red;
+  font-size: large;
+  font-family: festival;
+  transform: scale(1.2);
+
+}

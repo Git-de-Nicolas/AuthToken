@@ -1,0 +1,23 @@
+<h2 class="h2 text-center"> Création d'un compte </h2>
+
+<form (ngSubmit)="addUser()">
+
+  <div class="form-group w-50 mx-auto">
+    <label>Username : </label>
+    <input type="text" name="username" class="form-control" [(ngModel)]="user.username" required>
+  </div>
+
+  <!--    <label>Nom complet</label>-->
+  <!--    <input name="displayName" [(ngModel)]="user.displayName">-->
+  <!--    <hr>-->
+
+  <div class="form-group w-50 mx-auto">
+    <label>Mot de passe : </label>
+    <input type="password" name="password" class="form-control" [(ngModel)]="user.password">
+  </div>
+  <hr>
+
+  <div class="text-center">
+    <button class="btn btn-outline-secondary"> Créer un compte </button>
+  </div>
+</form>

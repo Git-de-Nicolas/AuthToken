@@ -1,0 +1,26 @@
+<h2 class="h2 text-center"> Formulaire de connexion </h2>
+
+<div class="container">
+  <form (ngSubmit)="login()">
+
+    <div class="form-group w-75 mx-auto">
+      <label>Username</label>
+      <input name="username" class="form-control" [(ngModel)]="username">
+      <hr>
+    </div>
+
+    <div class="form-group w-75 mx-auto">
+      <label>Mot de passe</label>
+      <input name="password" class="form-control" [(ngModel)]="password">
+      <hr>
+    </div>
+
+    <p *ngIf="errorMessage">
+      {{errorMessage}}
+    </p>
+
+    <div class="text-center">
+      <button class="btn btn-outline-info">Se connecter</button>
+    </div>
+  </form>
+</div>

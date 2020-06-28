@@ -1,0 +1,11 @@
+<div class="container">
+  <h1 class="h1 text-center"> Voici la liste des concerts : </h1>
+
+  <div class="list-group" *ngFor="let concert of concerts" routerLink="/editConcert/{{concert.id}}">
+    <a class="list-group-item list-group-item-action">
+      Artiste : {{concert.artiste_id}} <br>
+      Date : {{concert.dateConcert}} <br>
+      Durée : {{concert.duree}} minutes <br>
+      Heure Début : {{concert.heureConcert}} </a>
+  </div>
+</div>

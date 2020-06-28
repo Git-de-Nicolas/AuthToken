@@ -1,0 +1,45 @@
+<h2 class="h2 text-center"> Ajouter un Concert </h2>
+
+<form (ngSubmit)="addConcert(form)" #form="ngForm">
+
+  <!-- ARTISTE ID -->
+  <div class="form-group w-75 mx-auto">
+    <label> Nom de l'Artiste (artiste_id) : </label>
+    <input type="number" name="artiste_id" class="form-control" required [(ngModel)]="concert.artiste_id">
+  </div>
+
+  <!-- TODO: Remplacer 'artiste_id' par 'artiste.nom' ? -->
+
+  <!-- DATE -->
+  <div class="form-group w-75 mx-auto">
+    <label> Date du Concert : </label>
+    <input type="text" name="date" class="form-control" [(ngModel)]="concert.dateConcert">
+  </div>
+
+  <!-- HEURE -->
+  <div class="form-group w-75 mx-auto">
+    <label> Heure du Concert : </label>
+    <input type="time" name="heure" class="form-control" [(ngModel)]="concert.heureConcert">
+  </div>
+
+  <!-- DUREE -->
+  <div class="form-group w-75 mx-auto">
+    <label> Durée en minutes : </label>
+    <input type="text" name="duree" class="form-control" [(ngModel)]="concert.duree">
+  </div>
+
+  <!-- TEST -->
+
+  <!-- TEST -->
+
+
+  <!-- INVALID CHECKER -->
+  <div class="alert alert-danger" *ngIf="form.invalid && formSubmitted">
+    Veuillez remplir les champs requis
+  </div>
+
+  <!-- SUBMIT -->
+  <div class="text-center">
+    <button class="btn btn-outline-secondary"> Envoyer</button>
+  </div>
+</form>

@@ -1,0 +1,42 @@
+@font-face {
+  font-family: lato;
+  src: url('../assets/fonts/fontname/Blairesque Festive JF Regular.ttf') format("opentype");
+}
+
+.jumbotron {
+  background-image: url("src/assets/festival.png");
+  background-size: cover;
+  background: transparent;
+  margin-bottom: 0rem !important;
+
+  h1 {
+    color: white;
+    font-family: 'festival';
+    font-size: 7em;
+  }
+
+  .lead {
+    color: white;
+    font-family: festival;
+  }
+
+  hr.style18 {
+    height: 30px;
+    border-style: solid;
+    border-color: white;
+    border-width: 1px 0 0 0;
+    border-radius: 20px;
+  }
+}
+
+.navbar {
+  background-image: url("src/assets/color.png");
+  background-size: cover;
+  background: transparent;
+
+  .nav-link {
+    font-family: 'festival';
+    color: white;
+    background: rgba(0, 0, 0, 0.79);
+  }
+}

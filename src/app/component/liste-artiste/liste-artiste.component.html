@@ -1,0 +1,8 @@
+<div class="container">
+  <h1 class="h1 text-center"> Voici la liste des artiste : </h1> <br>
+
+
+  <div class="list-group mx-auto" *ngFor="let artiste of artistes" routerLink="/editArtiste/{{artiste.id}}">
+    <a class="list-group-item list-group-item-action"> <b> {{artiste.nom}} </b> </a>
+  </div>
+</div>

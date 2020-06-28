@@ -1,0 +1,66 @@
+<div class="container">
+  <div class="col-md-12">
+
+    <form
+      (ngSubmit)="editConcert(form)"
+      #form="ngForm"
+      [class.was-validated]="formSubmitted"
+      *ngIf="concert">
+
+      <h4 class="h4 text-center"> Formulaire de modification d'un Concert </h4>
+
+      <!-- ID (debug) -->
+      <div class="form-group w-50 mx-auto">
+        <label> ID </label>
+        <input type="number" name="id" class="form-control" [(ngModel)]="concert.id">
+      </div>
+
+      <!-- TEST Obtenir le nom de l'artiste à partir de son 'artiste_id' -->
+      <div class="form-group w-50 mx-auto">
+        <label> Nom de l'Artiste : </label>
+        <select class="custom-select" [(ngModel)]="concert.artiste_id" name="artiste_id">
+          <option *ngFor="let type of types" [value]="type.id"> {{type.nom}} </option>
+        </select>
+      </div>
+      <!-- TEST -->
+
+      <!--  ARTISTE_ID -->
+      <div class="form-group w-50 mx-auto">
+        <label> Nom de l'Artiste (Artiste ID) </label>
+        <input type="number" name="artiste_id" class="form-control" [(ngModel)]="concert.artiste_id">
+      </div>
+
+      <!-- DATE -->
+      <div class="form-group w-50 mx-auto">
+        <label> Date du Concert </label>
+        <input type="text" name="date" class="form-control" [(ngModel)]="concert.dateConcert">
+      </div>
+
+      <!-- HEURE -->
+      <div class="form-group w-50 mx-auto">
+        <label> Heure du Concert </label>
+        <input type="text" name="heure" class="form-control" [(ngModel)]="concert.heureConcert">
+      </div>
+
+      <!-- DUREE -->
+      <div class="form-group w-50 mx-auto" id="duree">
+        <label> Durée : </label>
+        <input type="number" name="duree" class="form-control" [(ngModel)]="concert.duree">
+      </div>
+
+
+      <!-- SUBMIT BUTTON -->
+      <div class="text-center">
+        <button type="submit" class="btn btn-outline-info">
+          <span> Envoyer </span>
+        </button>
+      </div>
+    </form>
+    <hr>
+
+    <!-- DELETE CONCERT -->
+    <div class="text-center">
+      <button (click)="deleteConcert()" class="btn btn-danger"> Supprimer ce Concert</button>
+    </div>
+  </div>
+</div>

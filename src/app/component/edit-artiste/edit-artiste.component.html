@@ -1,0 +1,34 @@
+<div class="container">
+  <div class="col-md-12">
+
+
+    <form (ngSubmit)="editArtiste(form)" #form="ngForm" [class.was-validated]="formSubmitted" *ngIf="artiste">
+      <h4 class="h4 text-center"> Formulaire de modification d'un Artiste : </h4>
+
+      <!-- TITRE -->
+      <div class="form-group w-75 mx-auto">
+        <label> Nom de l'Artiste </label>
+        <input type="text " name="nom" class="form-control" [(ngModel)]="artiste.nom" required #nameInput="ngModel">
+        <div class="invalid-feedback" *ngIf="nameInput.invalid">
+          Le nom est obligatoire
+        </div>
+      </div>
+
+      <div class="form-group w-75 mx-auto">
+        <label> Biographie: </label>
+        <input type="text" name="biographie" class="form-control" [(ngModel)]="artiste.biographie">
+      </div>
+
+      <div class="text-center">
+        <button type="submit" class="btn btn-outline-info">
+          <span>Envoyer</span>
+        </button>
+      </div>
+    </form>
+    <hr>
+
+    <div class="text-center">
+      <button (click)="deleteArtiste()" class="btn btn-danger"> Supprimer cet Artiste</button>
+    </div>
+  </div>
+</div>
